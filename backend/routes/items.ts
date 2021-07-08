@@ -1,9 +1,11 @@
-const express = require('express')
-const router = express.Router()
+import { Router } from 'express'
 const ItemController = require("../controllers/ItemController")
 //const schema = require("../config/schemas/userSchema")
 //const formValidate = require("../middleware/formValidate")
 
-router.get("/", ItemController.getItems)
-router.post("/", ItemController.createItem)
-module.exports = router
+const itemsRouter = Router()
+
+itemsRouter.get("/", ItemController.getItems)
+itemsRouter.post("/", ItemController.createItem)
+
+export default itemsRouter

@@ -1,9 +1,11 @@
-import express from 'express'
+import { Router } from 'express'
 import * as ListController from "../controllers/ListController"
-const router = express.Router()
 //const schema = require("../config/schemas/userSchema")
 //const formValidate = require("../middleware/formValidate")
 
-router.get("/", ListController.getLists)
-router.post("/", ListController.createList)
-module.exports = router
+const listsRouter = Router()
+
+listsRouter.get("/", ListController.getLists)
+listsRouter.post("/", ListController.createList)
+
+export default listsRouter

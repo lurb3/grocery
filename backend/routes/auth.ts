@@ -1,9 +1,10 @@
-const express = require('express')
-const router = express.Router()
+import { Router } from 'express'
 const AuthController = require("../controllers/AuthController")
 const schema = require("../config/schemas/userSchema")
 const formValidate = require("../middleware/formValidate")
 
-router.post("/", formValidate(schema), AuthController.login)
+const authRouter = Router()
 
-module.exports = router
+authRouter.post("/", formValidate(schema), AuthController.login)
+
+export default authRouter

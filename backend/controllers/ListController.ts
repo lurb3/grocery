@@ -1,12 +1,23 @@
 const ListModel = require("../models/ListModel")
 
-exports.getLists = async (req, res) => {
+interface createList {
+  body: {
+    users: [],
+    items: []
+  }
+}
+
+interface result {
+  send: Function
+}
+
+export const getLists = async (res: result) => {
   const lists = await ListModel.find({})
 
   return res.send(lists)
 }
 
-exports.createList = (req, res) => {
+export const createList = (req: createList, res: result) => {
     const list = {
         users: req.body.users,
         items: req.body.items,

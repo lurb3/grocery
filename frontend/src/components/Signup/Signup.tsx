@@ -8,7 +8,6 @@ const Signup = () => {
       email: "gustavo2@test.pt",
       password: "123456",
     })
-    console.log('----', login)
   }
   return (
     <div>

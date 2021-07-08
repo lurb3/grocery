@@ -1,6 +1,6 @@
-const express = require('express')
+import express from 'express'
+import * as ListController from "../controllers/ListController"
 const router = express.Router()
-const ListController = require("../controllers/ListController")
 //const schema = require("../config/schemas/userSchema")
 //const formValidate = require("../middleware/formValidate")
 

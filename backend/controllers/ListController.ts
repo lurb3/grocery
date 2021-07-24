@@ -1,4 +1,4 @@
-const ListModel = require("../models/ListModel")
+import * as ListModel from "../models/ListModel"
 
 interface createList {
   body: {

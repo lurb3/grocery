@@ -7,4 +7,4 @@ const ListSchema = new mongoose.Schema({
 
 const ListModel = mongoose.model("List", ListSchema)
 
-module.exports = ListModel
+export default ListModel
